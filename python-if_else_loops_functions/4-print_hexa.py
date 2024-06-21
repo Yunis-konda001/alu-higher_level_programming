@@ -1,3 +1,6 @@
 #!/usr/bin/python3
-for i in range(100):
-    print("{:02d}".format(i), end=", " if i < 99 else "\n")
+output = ""
+for i in range(99):
+    output += "{} = 0x{:x}\n".format(i, i)
+output += "98 = 0x{:x}".format(98)
+print(output, end="")
