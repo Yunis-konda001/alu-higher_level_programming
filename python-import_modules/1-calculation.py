@@ -3,8 +3,6 @@
 from calculator_1 import add, sub, mul, div
 
 def main():
-if __name__ == '__main__':
-    from calculator_1 import add, sub, mul, div
     a = 10
     b = 5
 
@@ -14,7 +12,7 @@ if __name__ == '__main__':
     multiplication_result = mul(a, b)
     division_result = div(a, b)
 
-    # Print the results
+    # Print the results using only 4 print statements
     print(f"{a} + {b} = {addition_result}")
     print(f"{a} - {b} = {subtraction_result}")
     print(f"{a} * {b} = {multiplication_result}")
@@ -22,7 +20,3 @@ if __name__ == '__main__':
 
 if __name__ == "__main__":
     main()
-    print("{} + {} = {}".format(a, b, add(a, b)))
-    print("{} - {} = {}".format(a, b, sub(a, b)))
-    print("{} * {} = {}".format(a, b, mul(a, b)))
-    print("{} / {} = {}".format(a, b, div(a, b)))
