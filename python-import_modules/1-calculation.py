@@ -6,7 +6,7 @@ def main():
     a = 10
     b = 5
 
-    # Perform the calculations and store the results
+    # Perform the calculations
     addition_result = add(a, b)
     subtraction_result = sub(a, b)
     multiplication_result = mul(a, b)
