@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+
+# Check if PYFILE environment variable is set
+if [ -z "$PYFILE" ]; then
+    echo "PYFILE environment variable is not set."
+    exit 1
+fi
+
+# Compile the Python file
+python3 -m py_compile "$PYFILE"
+
+# Rename the compiled file to match the required output format
+compiled_file="${PYFILE}c"
+mv "${PYFILE}c" "$compiled_file"
