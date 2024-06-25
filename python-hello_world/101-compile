@@ -12,3 +12,10 @@ python3 -m py_compile "$PYFILE"
 # Rename the compiled file to match the required output format
 compiled_file="${PYFILE}c"
 mv "${PYFILE}c" "$compiled_file"
+
+# Check if the compilation was successful
+if [ -e "$compiled_file" ]; then
+    echo "1"
+else
+    echo "0"
+fi
