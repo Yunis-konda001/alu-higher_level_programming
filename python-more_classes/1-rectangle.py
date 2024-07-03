@@ -62,4 +62,3 @@ class Rectangle:
             raise TypeError(f"{dimension} must be an integer")
         if value < 0:
             raise ValueError(f"{dimension} must be >= 0")
-
