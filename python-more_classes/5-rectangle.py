@@ -57,8 +57,7 @@ class Rectangle:
         output = []
         for x in range(self.__height):
             [output.append('#') for y in range(self.__width)]
-            if x != self.__height
-            - 1:
+            if x != self.__height - 1:
                 output.append('\n')
         return "".join(output)
 
