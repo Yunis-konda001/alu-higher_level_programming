@@ -1,104 +1,62 @@
 #!/usr/bin/python3
-"""
-This module defines a Rectangle class.
-"""
+"""A class Rectangle that defines a rectangle based on 1-rectangle.py"""
+
 
 class Rectangle:
-    """
-    This class represents a rectangle.
-
-    Attributes:
-        width (int): The width of the rectangle.
-        height (int): The height of the rectangle.
-    """
-
+    """The Rectangle class"""
     def __init__(self, width=0, height=0):
-        """
-        Initializes a Rectangle instance.
+        """Initialize a Rectangle object.
 
         Args:
-            width (int, optional): The width of the rectangle. Defaults to 0.
-            height (int, optional): The height of the rectangle. Defaults to 0.
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Getter method for width attribute."""
+        """property(get&set) for the width of the Rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Setter method for width attribute."""
-        self.__validate_dimension(value, "width")
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
     def height(self):
-        """Getter method for height attribute."""
+        """property(get&set) for the height of the Rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Setter method for height attribute."""
-        self.__validate_dimension(value, "height")
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
         self.__height = value
 
-    def __validate_dimension(self, value, dimension):
-        """
-        Validates a dimension value (width or height).
-
-        Args:
-            value (int): The value of the dimension.
-            dimension (str): The dimension name ("width" or "height").
-
-        Raises:
-            TypeError: If value is not an integer.
-            ValueError: If value is less than 0.
-        """
-        if not isinstance(value, int):
-            raise TypeError(f"{dimension} must be an integer")
-        if value < 0:
-            raise ValueError(f"{dimension} must be >= 0")
-
     def area(self):
-        """
-        Calculates the area of the rectangle.
-
-        Returns:
-            int: The area of the rectangle.
-        """
-        return self.__width * self.__height
+        """Returns the area of the Rectangle."""
+        return (self.__width * self.__height)
 
     def perimeter(self):
-        """
-        Calculates the perimeter of the rectangle.
-
-        Returns:
-            int: The perimeter of the rectangle, or 0 if width or height is 0.
-        """
+        """Returns the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
-            return 0
-        return 2 * (self.__width + self.__height)
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """
-        Returns a string representation of the rectangle with the character '#'.
-
-        Returns:
-            str: The string representation of the rectangle, or an empty string
-            if width or height is 0.
-        """
+        """Returns the rectangle with the character #"""
         if self.__width == 0 or self.__height == 0:
-            return ""
-        return "\n".join(["#" * self.__width for _ in range(self.__height)])
-
-    def __repr__(self):
-        """
-        Returns a string representation of the Rectangle instance for debugging.
-
-        Returns:
-            str: A string that represents the Rectangle instance.
-        """
-        return f"Rectangle({self.__width}, {self.__height})"
+            return ("")
+        output = []
+        for x in range(self.__height):
+            [output.append('#') for y in range(self.__width)]
+            if x != self.__height - 1:
+                output.append('\n')
+        return "".join(output)
