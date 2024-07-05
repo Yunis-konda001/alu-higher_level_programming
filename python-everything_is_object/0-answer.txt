@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-
-# Example object
-example_object = 42
-
-# Print the type of the object
-print(type(example_object))
+alu-higher_level_programming/
+└── python-everything_is_object/
+    └── 0-answer.txt
