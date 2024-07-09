@@ -15,3 +15,6 @@ def is_same_class(obj, a_class):
     - True if obj is exactly an instance of a_class, False otherwise.
     """
     return type(obj) is a_class
+
+
+# Ensure two blank lines at the end of the file as per PEP8 recommendation
