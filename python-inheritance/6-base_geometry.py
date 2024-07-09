@@ -9,11 +9,11 @@ class BaseGeometry:
     """
     A class for geometry operations.
     """
-    
+
     def area(self):
         """
         Raises an exception indicating that the area method is not implemented.
-        
+
         Raises:
             Exception: area() is not implemented
         """
