@@ -17,6 +17,7 @@ class Rectangle(BaseGeometry):
             width (int): width of the rectangle (positive integer).
             height (int): height of the rectangle (positive integer).
         """
+        super().__init__()
         self.__width = 0
         self.__height = 0
 
@@ -56,3 +57,6 @@ class Rectangle(BaseGeometry):
         Returns a string representation of the rectangle.
         """
         return f"[Rectangle] {self.__width}/{self.__height}"
+
+# Testing the output of dir(Rectangle)
+print(dir(Rectangle))
