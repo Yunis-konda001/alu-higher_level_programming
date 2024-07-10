@@ -39,9 +39,9 @@ class Rectangle(BaseGeometry):
             height (int, optional): Height of the rectangle (positive integer).
         """
         super().__init__()
+        self.__width = 0
+        self.__height = 0
         if width is not None and height is not None:
-            self.__width = 0
-            self.__height = 0
             self.width = width
             self.height = height
 
