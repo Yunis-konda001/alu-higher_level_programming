@@ -3,6 +3,7 @@
 Define a class MyList that inherits from list.
 """
 
+
 class MyList(list):
     """
     A custom list class inheriting from Python's built-in list.
