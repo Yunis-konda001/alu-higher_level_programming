@@ -1,5 +1,4 @@
-# 9-rectangle.py
-
+#!/usr/bin/python3
 class BaseGeometry:
     """Base class with methods to validate geometry."""
 
