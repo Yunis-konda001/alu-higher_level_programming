@@ -1,12 +1,14 @@
 #!/usr/bin/python3
+"""Rebel int"""
+
 
 class MyInt(int):
-    """MyInt is a rebel. It inverts the == and != operators."""
-    
+    """Rebel int class"""
+
     def __eq__(self, other):
-        """Override == operator with != logic."""
-        return int(self) != other
-    
+        """not equal when =="""
+        return super().__ne__(other)
+
     def __ne__(self, other):
-        """Override != operator with == logic."""
-        return int(self) == other
+        """equal when !="""
+        return super().__eq__(other)
