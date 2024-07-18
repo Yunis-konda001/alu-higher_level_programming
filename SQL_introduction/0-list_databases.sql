@@ -1,3 +1,3 @@
---script to display all database
+--list of db
 SHOW DATABASES;
 
