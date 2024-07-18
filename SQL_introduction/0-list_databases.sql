@@ -1,3 +1,3 @@
 --list of db
-SHOW DATABASES;
+SHOW databases;
 
