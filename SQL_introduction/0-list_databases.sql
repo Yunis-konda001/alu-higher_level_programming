@@ -1,3 +1,3 @@
---list of db
+-- query for listing all databases
 SHOW databases;
 
