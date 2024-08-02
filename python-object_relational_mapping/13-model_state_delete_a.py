@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""  changes the name of a State object from the
-database hbtn_0e_6_usa"""
+"""deletes all State objects with a name
+containing the letter a from the database hbtn_0e_6_usa"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
@@ -14,10 +14,9 @@ if __name__ == "__main__":
 
     session = Session(engine)
 
-    record = session.query(State).filter(State.id == 2).first()
-
-    record.name = 'New Mexico'
+    records = session.query(State).filter(State.name.contains('a')).all()
+    for record in records:
+        session.delete(record)
 
     session.commit()
-
     session.close()
