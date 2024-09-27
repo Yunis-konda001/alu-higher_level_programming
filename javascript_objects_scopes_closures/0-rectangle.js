@@ -1,4 +1,4 @@
-#!/usr/bin/nod
+#!/usr/bin/node
 class Rectangle {
     // Empty class
 }
