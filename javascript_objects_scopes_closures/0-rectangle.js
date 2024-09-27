@@ -1,6 +1,6 @@
-#!/usr/bin/node
-const fs = require('fs');
+#!/usr/bin/nod
+class Rectangle {
+    // Empty class
+}
 
-fs.readFile(process.argv[2], (err, contents) => {
-  err ? console.log(err) : console.log(contents.toString());
-});
+module.exports = Rectangle; 
